@@ -1,0 +1,170 @@
+/* Header */
+.header {
+    background-color: #2196f3;
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.header h1 {
+    margin-top: 0;
+}
+
+.student-name {
+    color: #003366;
+    font-weight: bold;
+}
+
+.student-id {
+    font-weight: bold;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.container h2 {
+    color: #333;
+}
+
+.container p {
+    font-style: italic;
+}
+
+/* HIGHLIGHT BOX */
+.highlight {
+    background-color: #fff3e0;
+    border-left: 5px solid orange;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    margin: 0;
+    color: red;
+    font-style: italic;
+}
+
+/* IMAGE */
+.container img {
+    margin-top: 15px;
+}
+
+/* GRADES */
+.grade {
+    color: red;
+}
+
+.grade span {
+    font-weight: bold;
+}
+
+/* BUTTON SUBMIT */
+.btn-submit {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.note {
+    color: red;
+}
+
+form {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+input:focus, textarea:focus {
+    border-color: #4caf50;
+    background-color: #ddedde;
+    outline: none;
+}
+
+.btn-send {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th {
+    background-color: #1976d2;
+    color: white;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #e3f2fd;
+}
+
+.grade-a {
+    color: green;
+    font-weight: bold;
+}
+
+.grade-b {
+    color: darkgreen;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: gray;
+    font-size: 14px;
+}
