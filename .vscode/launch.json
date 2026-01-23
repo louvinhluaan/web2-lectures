@@ -9,7 +9,7 @@
             "type": "firefox",
             "request": "launch",
             "name": "Open index.html",
-            "file": "d:\\LVL\\Study\\COMP1842 - Web 2\\Lec2\\index.html",
+            "file": "d:\\LVL\\Study\\COMP1842 - Web 2\\Lec3\\index.html",
             "firefoxExecutable": "C:\\Program Files\\Firefox Developer Edition\\firefox.exe"
         }
     ]

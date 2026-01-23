@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label id="label1" for="input1">Input 1</label> <br>
+        <input type="text" id="input1" name="input1"> <br>
+        <label id="label2" for="input2">Input 2</label> <br>
+        <input type="text" id="input2" name="input2"> <br>
+        <input type="button" value="Calc Area" onclick="doCalc('area')">
+        <input type="button" value="Calc Perimeter" onclick="doCalc('perimeter')">
+        <input type="button" value="Calc Average" onclick="doCalc('average')"> <br>
+        <input type="button" value="Calc BMI" onclick="doCalc('bmi')">
+        <input type="button" value="Calc Total Minute" onclick="doCalc('minute')">
+        <input type="button" value="Find Max Value" onclick="doCalc('max')"> <br>
+        <p id="result">Result</p>
+        <input id="reset" type="button" value="Reset" onclick="doCalc('reset')">
+    </form>
+    <script>
+        function calcArea(aWidth, aHeight) {
+            const area = aWidth * aHeight;
+            return area;
+        }
+
+        function calcPerimeter(aWidth, aLength) {
+            const perimeter = (aWidth + aLength)*2;
+            return perimeter;
+        }
+
+        function calcAverage(num1, num2) {
+            const average = (num1 + num2)/2;
+            return average;
+        }
+
+        function calcBMI(weight, heightCm) {
+            const heightM = heightCm / 100;
+            return weight / (heightM * heightM);
+        }
+
+        function calcTotalMinute(hour, minute) {
+            const totalMinute = (hour * 60) + minute;
+            return totalMinute;
+        }
+
+        function findMaxValue(num1, num2) {
+            const max = num1 < num2 ? num2 : num1;
+            return max;
+        }
+
+        function doCalc(type) {
+            const i1 = parseFloat(document.getElementById("input1").value);
+            const i2 = parseFloat(document.getElementById("input2").value);
+
+            if (type !== 'reset' && (isNaN(i1) || isNaN(i2))) {
+                result.innerText = "Result: Invalid input";
+                return;
+            }
+
+            switch (type) {
+                case "area":
+                    label1.innerText = "Width";
+                    label2.innerText = "Height";
+                    result.innerText = "Result Area is " + calcArea(i1, i2);
+                    break;
+
+                case "perimeter":
+                    label1.innerText = "Width";
+                    label2.innerText = "Length";
+                    result.innerText = "Result Perimeter " + calcPerimeter(i1, i2);
+                    break;
+
+                case "average":
+                    label1.innerText = "Number 1";
+                    label2.innerText = "Number 2";
+                    result.innerText = "Result Average is " + calcAverage(i1, i2);
+                    break;
+
+                case "bmi":
+                    label1.innerText = "Weight (kg)";
+                    label2.innerText = "Height (cm)";
+                    result.innerText = "Result BMI is " + calcBMI(i1, i2).toFixed(2);
+                    break;
+
+                case "minute":
+                    label1.innerText = "Hour";
+                    label2.innerText = "Minute";
+                    result.innerText = "Result total minute is " + calcTotalMinute(i1, i2);
+                    break;
+
+                case "max":
+                    label1.innerText = "Number 1";
+                    label2.innerText = "Number 2";
+                    result.innerText = "Result max value is " + findMaxValue(i1, i2);
+                    break;
+
+                case "reset":
+                    input1.value = "";
+                    input2.value = "";
+                    label1.innerText = "Input 1";
+                    label2.innerText = "Input 2";
+                    result.innerText = "Result";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
